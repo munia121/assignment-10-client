@@ -1,6 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./ProviderContext";
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleSignOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                // toast.success('User Log out')
+                console.log(error)
+            })
+    }
+
+
     const navLinks = <>
         <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700  border  border-pink-700 font-bold  rounded-md ' : 'font-bold text-black '} to={'/'}>Home</NavLink></li>
 
@@ -33,8 +50,21 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-4">
-                    <a className="btn">Login</a>
-                    <a className="btn">Register</a>
+                    {/* <Link to={'/login'}> <button className="btn">Login</button> </Link>
+                   <Link to={'/register'}> <button className="btn">Register</button> </Link> */}
+
+                    {
+                        user ?
+                            <>
+                                <div className="tooltip tooltip-left " data-tip={user.displayName}>
+                                    <img className={`rounded-full h-10 w-10  `} src={user?.photoURL || 'https://ibb.co/WxjPyWc'} alt="" />
+
+                                </div>
+                                <button className="btn ml-6 bg-pink-600 text-white" onClick={handleSignOut}>Log out</button>
+                            </>
+                            :
+                            <Link to={'/login'} className="btn bg-pink-600 text-white">Login</Link>
+                    }
                 </div>
             </div>
         </div>
