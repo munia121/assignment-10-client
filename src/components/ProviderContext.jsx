@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { createContext, useEffect, useState } from "react";
 import auth from "./firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext(null)
 const ProviderContext = ({children}) => {
@@ -34,6 +35,14 @@ const ProviderContext = ({children}) => {
         return signOut(auth)
     }
 
+
+    // github
+    const gitHubProvider = new GithubAuthProvider();
+    // gitHubProvider.addScope('user:email')
+    const gitHubLogin = () =>{
+        setLoading(true)
+        return signInWithPopup(auth, gitHubProvider)
+    }
 
 
 
@@ -72,6 +81,7 @@ const ProviderContext = ({children}) => {
         loading,
         setAutoUpdate,
         updateUserProfile,
+        gitHubLogin
         
 
     }

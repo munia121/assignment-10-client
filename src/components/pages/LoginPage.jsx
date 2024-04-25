@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ProviderContext";
 import { FcGoogle } from "react-icons/fc";
 // import { Link, useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ const LoginPage = () => {
    
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // const location = useLocation()
 
     const handleSubmit = (e) => {
@@ -66,19 +66,19 @@ const LoginPage = () => {
 
 
 
-        // const gitHubHandle = () => {
-        //     gitHubLogin()
-        //         .then(result => {
-        //             console.log(result.user)
-        //             navigate(location?.state? location.state: '/')
+        const gitHubHandle = () => {
+            gitHubLogin()
+                .then(result => {
+                    console.log(result.user)
+                    navigate(location?.state? location.state: '/')
                     
-        //         })
-        //         .catch(error => {
-        //             console.log(error)
+                })
+                .catch(error => {
+                    console.log(error)
     
-        //         })
+                })
     
-        // }
+        }
 
 
 
@@ -170,9 +170,9 @@ const LoginPage = () => {
                                     <FcGoogle size={30}></FcGoogle>
                                 </p>
 
-                                {/* <p onClick={gitHubHandle} className="px-4 py-2 rounded-md border">
+                                <p onClick={gitHubHandle} className="px-4 py-2 rounded-md border">
                                     <FaGithub size={30}></FaGithub>
-                                </p> */}
+                                </p>
                             </div>
                         </form>
                     </div>
