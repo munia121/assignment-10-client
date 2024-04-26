@@ -39,7 +39,7 @@ const LoginPage = () => {
                 console.log(result.user)
                 e.target.reset()
                 // toast.success('Login success')
-                // navigate(location?.state? location.state: '/')
+                navigate(location?.state? location.state: '/')
                
             })
             // eslint-disable-next-line no-unused-vars
@@ -54,7 +54,7 @@ const LoginPage = () => {
         googleLogin()
             .then(result => {
                 console.log(result.user)
-                // navigate(location?.state? location.state: '/')
+                navigate(location?.state? location.state: '/')
                 
             })
             .catch(error => {
@@ -118,7 +118,7 @@ const LoginPage = () => {
                         <h1 className="lg:text-5xl font-bold">Login now!</h1>
                     </div>
                     <div className="w-full mt-4 lg:mt-10 lg:w-[800px] mx-auto bg-base-100">
-                        <form onSubmit={handleSubmit} className="rounded-lg card-body border-pink-700 border">
+                        <form onSubmit={handleSubmit} className="rounded-lg card-body bg-[#f29c94] border">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-xl">Email</span>
@@ -153,7 +153,7 @@ const LoginPage = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-pink-600 text-white text-lg">Login</button>
+                                <button className="btn bg-[#f29c94] text-white text-lg">Login</button>
                             </div>
 
 

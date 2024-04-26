@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../ProviderContext";
 
 const AddCraft = () => {
+
+    const {user} = useContext(AuthContext)
+
 
     const handlerAddCraft = (event) => {
         event.preventDefault()
@@ -15,8 +20,8 @@ const AddCraft = () => {
         const processing = form.processing.value;
 
         const stock = form.stock.value;
-        const email = form.email.value;
-        const userName = form.userName.value;
+        const email = user.email;
+        const userName = user.displayName;
         const photo = form.photo.value;
 
         const newCraft = { name,category, price, ratings, description, customize, processing, stock,email, userName, photo }
@@ -24,27 +29,28 @@ const AddCraft = () => {
 
         // send data to the server
 
-        // fetch('https://coffee-store-server-gamma-nine.vercel.app/coffee', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newCoffee)
+        fetch('http://localhost:5000/textileArt/', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCraft)
 
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 title: 'Success',
-        //                 text: 'User Added Successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Ok'
-        //             })
-        //         }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    form.reset()
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Data Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
 
-        //     })
+            })
     }
 
 

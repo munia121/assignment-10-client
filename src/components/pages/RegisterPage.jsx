@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ProviderContext";
 
 const RegisterPage = () => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     // const loaction = useLocation()
 
     const { createUser, updateUserProfile, setAutoUpdate } = useContext(AuthContext);
@@ -92,7 +92,7 @@ const RegisterPage = () => {
                 console.log(result.user)
                 e.target.reset()
                 // toast.success('Register Successfully')
-                // navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)

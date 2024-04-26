@@ -21,7 +21,7 @@ const NavBar = () => {
     const navLinks = <>
         <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700  border  border-pink-700 font-bold  rounded-md ' : 'font-bold text-black '} to={'/'}>Home</NavLink></li>
 
-        <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/updateProfile'}>All Art & craft</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/allcraft'}>All Art & craft</NavLink></li>
 
         <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/addCraft'}>Add Craft</NavLink></li>
 
@@ -32,7 +32,7 @@ const NavBar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const NavBar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-3xl">FoodCorner</a>
+                    <a className="btn btn-ghost text-3xl">Daisy UI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -60,10 +60,10 @@ const NavBar = () => {
                                     <img className={`rounded-full h-10 w-10  `} src={user?.photoURL || 'https://ibb.co/WxjPyWc'} alt="" />
 
                                 </div>
-                                <button className="btn ml-6 bg-pink-600 text-white" onClick={handleSignOut}>Log out</button>
+                                <button className="btn ml-6 bg-[#f29c94] " onClick={handleSignOut}>Log out</button>
                             </>
                             :
-                            <Link to={'/login'} className="btn bg-pink-600 text-white">Login</Link>
+                            <Link to={'/login'} className="btn bg-[#f29c94] ">Login</Link>
                     }
                 </div>
             </div>
