@@ -10,11 +10,13 @@ import AddCraft from "../pages/Home/AddCraft";
 import PrivetRoute from "../privetRout/PrivetRoute";
 import CardDetails from "../pages/CardDetails";
 import AllCraft from "../pages/AllCraft";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayOut></MainLayOut>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
