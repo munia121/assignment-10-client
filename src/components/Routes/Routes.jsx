@@ -6,6 +6,7 @@ import MainLayOut from "../Mainlayout/MainLayOut";
 import HomePage from "../pages/Home/HomePage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
+import AddCraft from "../pages/Home/AddCraft";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<RegisterPage></RegisterPage>
+            },
+            {
+                path:'/addCraft',
+                element:<AddCraft></AddCraft>
             }
         ]
     },

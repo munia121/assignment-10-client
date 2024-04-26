@@ -23,7 +23,7 @@ const NavBar = () => {
 
         <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/updateProfile'}>All Art & craft</NavLink></li>
 
-        <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/about'}>Add Craft</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/addCraft'}>Add Craft</NavLink></li>
 
         <li><NavLink className={({ isActive }) => isActive ? 'text-pink-700 border border-pink-700 font-bold  rounded-md ' : 'font-bold text-black'} to={'/about'}>My Art&Craft</NavLink></li>
 

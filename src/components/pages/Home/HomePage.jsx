@@ -54,10 +54,8 @@ const HomePage = () => {
                                 <p data-aos="fade-up"
                                     data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-white md:w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
                             </div>
-
                         </div>
                     </SwiperSlide>
-
                 </Swiper>
             </div>
         </div>
