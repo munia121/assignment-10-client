@@ -21,13 +21,7 @@ const MyCraft = () => {
 
 
     
-    // const handleShortData = short =>{
-    //     if(short.toLowerCase() === 'YES'){
-    //         let shorting = items.sort((a,b) => a.No - b.No);
-    //         setItem(shorting)
-    //         console.log(shorting)
-    //     }
-    // }
+    
     const handleShortData = short =>{
         if(short === 'all'){
             setItem(displayItem)
@@ -63,7 +57,7 @@ const MyCraft = () => {
             </div>
             <div className="grid lg:grid-cols-3 gap-7 md:grid-cols-2">
                 {
-                    items.map(item => <MyCraftCard key={item._id} item={item}></MyCraftCard>)
+                    items.map(item => <MyCraftCard key={item._id} item={item} items={items} setItem={setItem}></MyCraftCard>)
                 }
             </div>
         </div>

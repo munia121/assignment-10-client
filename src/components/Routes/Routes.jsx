@@ -12,6 +12,7 @@ import CardDetails from "../pages/CardDetails";
 import AllCraft from "../pages/AllCraft";
 import ErrorPage from "../pages/ErrorPage";
 import MyCraft from "../pages/MyCraft";
+import UpdatePage from "../pages/UpdatePage";
 
 export const router = createBrowserRouter([
     {
@@ -49,6 +50,11 @@ export const router = createBrowserRouter([
             {
                 path:'/mycraft',
                 element:<MyCraft></MyCraft>
+            },
+            {
+                path:'/update/:id',
+                element:<UpdatePage></UpdatePage>,
+                loader: ({params}) => fetch(`http://localhost:5000/textileArt/${params.id}`)
             }
            
 
