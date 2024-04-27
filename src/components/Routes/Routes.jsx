@@ -11,6 +11,7 @@ import PrivetRoute from "../privetRout/PrivetRoute";
 import CardDetails from "../pages/CardDetails";
 import AllCraft from "../pages/AllCraft";
 import ErrorPage from "../pages/ErrorPage";
+import MyCraft from "../pages/MyCraft";
 
 export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path:'/allcraft',
                 element:<AllCraft></AllCraft>
+            },
+            {
+                path:'/mycraft',
+                element:<MyCraft></MyCraft>
             }
            
 
