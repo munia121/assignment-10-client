@@ -6,10 +6,25 @@ import { FaArrowRight } from 'react-icons/fa';
 import CraftItems from './CraftItems';
 import ExtraSection1 from './extraSection/ExtraSection1';
 import ExtraRoute2 from './extraSection/ExtraRoute2';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const HomePage = () => {
+
+    const [items, setItems] = useState([])
+
+    console.log(items)
+    useEffect(() => {
+        fetch('http://localhost:5000/employeeData')
+            .then(res => res.json())
+            .then(data => {
+                setItems(data)
+            })
+    }, [])
+
+
     return (
         <div>
-            <div className='lg:mt-20'>  
+            <div className='lg:mt-20'>
                 <Swiper
                     navigation={true}
                     loop={true}
@@ -50,7 +65,7 @@ const HomePage = () => {
                     </SwiperSlide>
                     {/* ********* */}
                     <SwiperSlide>
-                        <div className='h-[600px] bg-no-repeat bg-cover rounded-lg bg-cover' style={{ backgroundImage: `url(https://i.ibb.co/YN1YWmN/5514af2d9fa8158f8a33c5dc5fe1ee20.jpg)` }}>
+                        <div className='h-[600px] bg-no-repeat bg-cover rounded-lg ' style={{ backgroundImage: `url(https://i.ibb.co/YN1YWmN/5514af2d9fa8158f8a33c5dc5fe1ee20.jpg)` }}>
                             {/* <img className="w-full h-[600px] rounded-lg" src="https://i.ibb.co/vVShkWm/modern-townhouse-design-house-168058-939.jpg" alt="" /> */}
                             <div className='flex flex-col justify-center items-center pt-32 pl-20'>
                                 {/* <h1 data-aos="zoom-in" data-aos-duration='1500' className='text-5xl font-extrabold text-white ' >Modern Townhouse</h1> */}
@@ -74,6 +89,17 @@ const HomePage = () => {
                     </div>
                     <div className='mt-20'>
                         <h2 className='text-4xl text-center'>Art & Craft Categories Section</h2>
+                        <div>
+                            <div className='grid gap-6 grid-cols-4'>
+                                <div>
+                                    <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
+                                    <Link to={'/category'} ><button>Embroidery </button></Link>
+                                </div>
+                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
+                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
+                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <ExtraRoute2></ExtraRoute2>

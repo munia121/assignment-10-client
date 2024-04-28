@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../ProviderContext";
 import MyCraftCard from "../MyCraftCard";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 
 const MyCraft = () => {
@@ -28,12 +29,12 @@ const MyCraft = () => {
         }
 
         else if(short === 'no'){
-            let shorting = items.filter(item => item.customize === 'No');
+            let shorting = displayItem.filter(item => item.customize === 'No');
             setItem(shorting)
             console.log(shorting)
         }
         else if(short === 'yes'){
-            let shorting = items.filter(item => item.customize === 'Yes');
+            let shorting = displayItem.filter(item => item.customize === 'Yes');
             setItem(shorting)
             console.log(shorting)
         }
@@ -47,7 +48,7 @@ const MyCraft = () => {
         <div>
             <div className="text-center mt-10">
                 <div className="dropdown dropdown-hover ">
-                    <div tabIndex={0}  className="btn m-1 w-[200px] bg-[#f29c94] font-bold ">Customize</div>
+                    <div tabIndex={0}  className="btn m-1 w-[200px] bg-[#f29c94] font-bold ">Customize <RiArrowDropDownLine size={30}></RiArrowDropDownLine></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 w-52 font-bold shadow bg-base-100 rounded-box ">
                         <li onClick={()=>handleShortData('all')}><a>All</a></li>
                         <li onClick={()=>handleShortData('yes')}><a>Yes</a></li>

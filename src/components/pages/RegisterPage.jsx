@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ProviderContext";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
 
@@ -91,7 +93,7 @@ const RegisterPage = () => {
 
                 console.log(result.user)
                 e.target.reset()
-                // toast.success('Register Successfully')
+                toast.success('Register Successfully')
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {

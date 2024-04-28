@@ -1,11 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../ProviderContext";
 
 const AddCraft = () => {
 
-    const {user} = useContext(AuthContext)
-
+    const { user } = useContext(AuthContext)
 
     const handlerAddCraft = (event) => {
         event.preventDefault()
@@ -24,7 +23,7 @@ const AddCraft = () => {
         const userName = user.displayName;
         const photo = form.photo.value;
 
-        const newCraft = { name,category, price, ratings, description, customize, processing, stock,email, userName, photo }
+        const newCraft = { name, category, price, ratings, description, customize, processing, stock, email, userName, photo }
         console.log(newCraft)
 
         // send data to the server
@@ -53,14 +52,28 @@ const AddCraft = () => {
             })
     }
 
+    const [selectedOption, setSelectedOption] = useState('');
+    const [selectCategory, setSelectCategory] = useState('');
+    
+    // Function to handle option selection
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+
+    const handleCategory = (event) => {
+        setSelectCategory(event.target.value);
+    };
+
+
+
 
 
     return (
         <div>
-            <div className=" mt-20 p-24">
+            <div className=" mt-20 p-2 lg:p-24">
                 <h2 className="text-3xl font-extrabold text-center">Please Add A Craft</h2>
 
-                <form onSubmit={handlerAddCraft}>
+                <form onSubmit={handlerAddCraft} className="border rounded-lg p-5 lg:p-10 border-[#f29c94] lg:mt-20">
                     {/* form name and quanity row */}
                     <div className="md:flex mt-10 gap-16">
                         <div className="md:w-1/2">
@@ -72,12 +85,28 @@ const AddCraft = () => {
                             </label>
                         </div>
                         <div className="md:w-1/2">
-                            <label className="form-control w-full ">
+                            {/* <label className="form-control w-full ">
                                 <div className="label">
                                     <span className="label-text">Subcategory_Name</span>
                                 </div>
                                 <input type="text" name="category" placeholder="category" className="input input-bordered w-full " />
-                            </label>
+                            </label> */}
+                            <div>
+                                <h2>Subcategory_Name</h2>
+                                {/* Dropdown menu */}
+                                <select className='w-full h-12 border rounded-lg' name='category' value={selectCategory} onChange={handleCategory}>
+                                    <option className='w-50' value="">Select...</option>
+                                    <option value="Embroidery">Embroidery</option>
+                                    <option value="Knitt ing & Crocheting">Knitt ing & Crocheting</option>
+                                    <option value="Quilting">Quilting</option>
+                                    <option value="Beadwork">Beadwork</option>
+                                    <option value="Tie-Dyeing">Tie-Dyeing</option>
+                                    <option value="Macrame">Macrame</option>
+
+                                </select>
+                                {/* Display selected option */}
+                                {/* <p>You selected: {selectedOption}</p> */}
+                            </div>
                         </div>
                     </div>
                     {/* form supplier row */}
@@ -110,12 +139,19 @@ const AddCraft = () => {
                             </label>
                         </div>
                         <div className="md:w-1/2">
-                            <label className="form-control w-full ">
-                                <div className="label">
-                                    <span className="label-text">Customization</span>
-                                </div>
-                                <input type="text" name="customize" placeholder="Yes/No" className="input input-bordered w-full " />
-                            </label>
+                            <div>
+                                <h2>Customize</h2>
+                                {/* Dropdown menu */}
+                                <select className='w-full h-12 border rounded-lg' name='customize' value={selectedOption} onChange={handleOptionChange}>
+                                    <option className='w-50' value="">Select...</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+
+                                </select>
+                                {/* Display selected option */}
+                                {/* <p>You selected: {selectedOption}</p> */}
+                            </div>
+
                         </div>
                     </div>
                     {/* **************** */}
@@ -138,7 +174,7 @@ const AddCraft = () => {
                         </div>
                     </div>
                     {/* ******************* */}
-                    <div className="md:flex mt-10 gap-16">
+                    {/* <div className="md:flex mt-10 gap-16">
                         <div className="md:w-1/2">
                             <label className=" form-control ">
                                 <div className="label">
@@ -155,7 +191,7 @@ const AddCraft = () => {
                                 <input type="text" name="userName" placeholder="user name" className="input input-bordered w-full " />
                             </label>
                         </div>
-                    </div>
+                    </div> */}
                     {/* ***** form photo url */}
                     <div className="w-full mt-8">
                         <label className="form-control w-full ">
@@ -165,7 +201,7 @@ const AddCraft = () => {
                             <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full " />
                         </label>
                     </div>
-                    <input type="submit" value="Add Craft" className="btn btn-block mt-8 bg-black text-white" />
+                    <input type="submit" value="Add Craft" className="btn btn-block mt-8 bg-[#f29c94] text-white" />
                 </form>
             </div>
         </div>

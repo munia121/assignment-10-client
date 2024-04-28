@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const SingleCrafItem = ({ item }) => {
-    console.log(item)
+    // console.log(item)
 
 
     // eslint-disable-next-line no-unused-vars

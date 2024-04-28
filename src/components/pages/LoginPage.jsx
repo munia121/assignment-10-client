@@ -4,6 +4,8 @@ import { FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ProviderContext";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 // import { Link, useNavigate } from "react-router-dom";
 
 
@@ -38,14 +40,14 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user)
                 e.target.reset()
-                // toast.success('Login success')
+                toast.success('Login success')
                 navigate(location?.state? location.state: '/')
                
             })
             // eslint-disable-next-line no-unused-vars
             .catch(error => {
                 setError('invalid password or email')
-                // toast.warn("Invalid password or email")
+                toast.warn("Invalid password or email")
             })
 
     }
