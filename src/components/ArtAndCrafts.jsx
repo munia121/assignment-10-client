@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 
-import { Link, useParams } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 
 
 const ArtAndCrafts = ({data}) => {
     const {photo, category} = data;
-    const {categorys} = useParams()
+    // const {categorys} = useParams()
 
-    
+
    
     return (
         <Link to={`/category/${category}`}>
