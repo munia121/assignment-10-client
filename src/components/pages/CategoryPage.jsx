@@ -1,6 +1,7 @@
 
 
 const CategoryPage = () => {
+
     return (
         <div>
             category pages

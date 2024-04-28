@@ -8,6 +8,7 @@ import ExtraSection1 from './extraSection/ExtraSection1';
 import ExtraRoute2 from './extraSection/ExtraRoute2';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ArtAndCrafts from '../../ArtAndCrafts';
 const HomePage = () => {
 
     const [items, setItems] = useState([])
@@ -90,15 +91,7 @@ const HomePage = () => {
                     <div className='mt-20'>
                         <h2 className='text-4xl text-center'>Art & Craft Categories Section</h2>
                         <div>
-                            <div className='grid gap-6 grid-cols-4'>
-                                <div>
-                                    <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                                    <Link to={'/category'} ><button>Embroidery </button></Link>
-                                </div>
-                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                                <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                            </div>
+                            <ArtAndCrafts></ArtAndCrafts>
                         </div>
                     </div>
                     <div>

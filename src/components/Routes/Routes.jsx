@@ -60,7 +60,8 @@ export const router = createBrowserRouter([
             {
                 path:'/category',
                 element:<CategoryPage></CategoryPage>
-            }
+            },
+
            
 
         ]

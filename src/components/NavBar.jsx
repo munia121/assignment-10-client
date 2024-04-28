@@ -7,7 +7,7 @@ import image from '../assets/image.png'
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
 
 
     const handleSignOut = () => {
