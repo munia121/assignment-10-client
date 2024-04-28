@@ -1,36 +1,22 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+
 import { Link, useParams } from "react-router-dom";
 
 
-const ArtAndCrafts = () => {
+
+const ArtAndCrafts = ({data}) => {
+    const {photo, category} = data;
+    const {categorys} = useParams()
+
+    
    
-    const [data, setData] = useState([]);
-    console.log(data)
-
-    // useState(() =>{
-    //     // fetch(`http://localhost:5000/allCategory  `)
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         setData(data)
-    //     })
-    // }, [])
-
-
-
     return (
-        <div>
-            <div>
-                <div className='grid gap-6 grid-cols-4'>
-                    <Link to={`category/`}>
-                        <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                        <button>Embroidery </button>
-                    </Link>
-                    <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                    <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                    <img className='w-[400px]' src="https://i.ibb.co/4gXZ0nN/3238745-e940-4.jpg" alt="" />
-                </div>
+        <Link to={`/category/${category}`}>
+            <div className="mt-20">
+               <img className="w-[400px] mx-auto h-[200px] rounded-lg" src={photo} alt="" />
+               <p  className="font-bold text-3xl text-center">{category}</p>
             </div>
-        </div>
+        </Link>
     );
 };
 

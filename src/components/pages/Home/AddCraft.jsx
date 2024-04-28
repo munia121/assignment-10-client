@@ -174,13 +174,13 @@ const AddCraft = () => {
                         </div>
                     </div>
                     {/* ******************* */}
-                    {/* <div className="md:flex mt-10 gap-16">
+                    <div className="md:flex mt-10 gap-16">
                         <div className="md:w-1/2">
                             <label className=" form-control ">
                                 <div className="label">
                                     <span className="label-text">User Email</span>
                                 </div>
-                                <input type="text" name="email" placeholder="user email" className="input input-bordered w-full " />
+                                <input readOnly type="text" name="email" placeholder="user email" className="input input-bordered w-full " />
                             </label>
                         </div>
                         <div className="md:w-1/2">
@@ -188,10 +188,10 @@ const AddCraft = () => {
                                 <div className="label">
                                     <span className="label-text">User Name</span>
                                 </div>
-                                <input type="text" name="userName" placeholder="user name" className="input input-bordered w-full " />
+                                <input readOnly type="text" name="userName" placeholder="user name" className="input input-bordered w-full " />
                             </label>
                         </div>
-                    </div> */}
+                    </div>
                     {/* ***** form photo url */}
                     <div className="w-full mt-8">
                         <label className="form-control w-full ">

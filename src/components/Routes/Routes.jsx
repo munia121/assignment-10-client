@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/textileArt/${params.id}`)
             },
             {
-                path:'/category',
+                path:'/category/:categorys',
                 element:<CategoryPage></CategoryPage>
             },
 
