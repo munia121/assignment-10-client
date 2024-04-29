@@ -111,7 +111,7 @@ const RegisterPage = () => {
 
                     </div>
                     <div className="w-full card md:w-[800px] mx-auto mt-10  bg-base-100">
-                        <form onSubmit={handleSubmit} className="card-body border border-pink-700 rounded-lg">
+                        <form onSubmit={handleSubmit} className="card-body border border-[#f29c94] rounded-lg">
                             {/* ******** */}
                             <div className="form-control">
                                 <label className="label">
@@ -147,10 +147,10 @@ const RegisterPage = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-pink-600 text-white text-lg">Register</button>
+                                <button className="btn bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] text-white text-lg">Register</button>
                             </div>
 
-                            <p>Have you any account? <Link className="text-pink-700 underline" to={'/login'}>Login</Link></p>
+                            <p>Have you any account? <Link className="text-[#f29c94] underline" to={'/login'}>Login</Link></p>
 
                         </form>
                     </div>

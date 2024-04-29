@@ -19,7 +19,8 @@ const SingleCrafItem = ({ item }) => {
                 </div>
                 <p className="dark:text-gray-800">{description}</p>
                 <Link to={`/details/${_id}`}>
-                    <button className="btn w-full mt-3 bg-[#f29c94]">View Details</button>
+                    <button className="btn w-full mt-3 bg-gradient-to-r from-[#f5d3d0] to-[#f29c94]">View Details</button>
+                    
                 </Link>
             </div>
         </div>

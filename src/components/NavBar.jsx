@@ -53,7 +53,7 @@ const NavBar = () => {
     </>
     return (
         <div>
-            <div className="navbar rounded-lg mt-6 bg-[#f5d3d0]">
+            <div className="navbar rounded-lg mt-6  bg-gradient-to-r from-[#f5d3d0] to-[#f29c94]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -91,8 +91,8 @@ const NavBar = () => {
                             </>
                             :
                             <>
-                                <Link to={'/login'} className="btn bg-[#f29c94] ">Login</Link>
-                                <Link to={'/register'} className="btn bg-[#f29c94] ">Register</Link>
+                                <Link to={'/login'} className="btn bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] ">Login</Link>
+                                <Link to={'/register'} className="btn bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] ">Register</Link>
                             </>
                     }
                 </div>

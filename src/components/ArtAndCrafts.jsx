@@ -14,7 +14,7 @@ const ArtAndCrafts = ({data}) => {
         <Link to={`/category/${category}`}>
             <div className="mt-20">
                <img className="w-[400px] mx-auto h-[200px] rounded-lg" src={photo} alt="" />
-               <p  className="font-bold text-3xl text-center">{category}</p>
+               <p  className="font-bold text-2xl text-center">{category}</p>
             </div>
         </Link>
     );

@@ -20,7 +20,7 @@ const CardDetails = () => {
     }, [id]);
 
     return (
-        <div className="hero mt-20 lg:p-20 rounded-lg bg-[#f29c94]">
+        <div className="hero mt-20 lg:p-20 rounded-lg bg-gradient-to-r from-[#f5d3d0] to-[#f29c94]">
             <div className="hero-content flex-col lg:flex-row">
                 <img src={item.photo} className="lg:w-[600px] lg:h-[500px] rounded-lg shadow-2xl" />
                 <div>
@@ -77,7 +77,7 @@ const CardDetails = () => {
                                 </tbody>
                             </table>
                         </div>
-                    <Link to={'/'}><button className="btn mt-4 btn-primary">Go to Home</button></Link>
+                    <Link to={'/'}><button className="btn mt-4 bg-gradient-to-r from-[#f5d3d0] to-[#f29c94]">Go to Home</button></Link>
                 </div>
             </div>
         </div>

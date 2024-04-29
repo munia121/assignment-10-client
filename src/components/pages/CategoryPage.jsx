@@ -11,7 +11,7 @@ const CategoryPage = () => {
 
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
+        <div className="grid mt-10 lg:mt-20 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
             {
                 loadedData.map(item => <SingleCrafItem key={item._id} item={item}></SingleCrafItem>)
             }

@@ -40,7 +40,7 @@ const HomePage = () => {
                                     Create your own stunning macrame wall hangings with this complete kit, including cord, rings, and instructions.</p>
 
                                 <p data-aos="fade-up"
-                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-white w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
+                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@ const HomePage = () => {
                                 </p>
 
                                 <p data-aos="fade-up"
-                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-white w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
+                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@ const HomePage = () => {
                                 </p>
 
                                 <p data-aos="fade-up"
-                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-white w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
+                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -89,7 +89,7 @@ const HomePage = () => {
                                     Begin your tie-dyeing journey with this all-inclusive starter kit, featuring dyes, rubber bands, and instructions.</p>
 
                                 <p data-aos="fade-up"
-                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-white md:w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
+                                    data-aos-anchor-placement="top-bottom" data-aos-duration='1500' className='flex items-center gap-3 mt-8 text-xl bg-gradient-to-r from-[#f5d3d0] to-[#f29c94] md:w-[200px] p-4'>Discover more <FaArrowRight></FaArrowRight> </p>
                             </div>
                         </div>
                     </SwiperSlide>
