@@ -4,6 +4,7 @@ import SingleCrafItem from "./Home/SingleCrafItem";
 const AllCraft = () => {
 
     const [items, setItems] = useState([])
+    const [dataLength, setDataLength] = useState(6)
     // console.log(items)
 
     useEffect(() => {
@@ -17,8 +18,13 @@ const AllCraft = () => {
         <div>
             <div className="grid grid-cols-1 mt-20 lg:grid-cols-3 md:grid-cols-2 gap-10">
                 {
-                    items.map(item => <SingleCrafItem key={item._id} item={item}></SingleCrafItem>)
+                    items.slice(0, dataLength).map(item => <SingleCrafItem key={item._id} item={item}></SingleCrafItem>)
                 }
+            </div>
+            <div className="text-center mt-6">
+                <div className={dataLength === items.length && 'hidden'} >
+                    <button onClick={() => setDataLength(items.length)} className="btn text-center">See More</button>
+                </div>
             </div>
         </div>
     );
