@@ -20,7 +20,7 @@ const MyCraftCard = ({ item, items, setItem }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/textileArt/${id}`, {
+                fetch(`https://assignment-10-server-mu-liart.vercel.app/textileArt/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

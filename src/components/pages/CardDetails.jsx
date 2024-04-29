@@ -11,7 +11,7 @@ const CardDetails = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/textileArt/${id}`)
+        fetch(`https://assignment-10-server-mu-liart.vercel.app/textileArt/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -16,7 +16,7 @@ const HomePage = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allCategory`)
+        fetch(`https://assignment-10-server-mu-liart.vercel.app/allCategory`)
             .then(res => res.json())
             .then(data => {
                 setDatas(data)
@@ -99,7 +99,7 @@ const HomePage = () => {
                         <h2 className='text-3xl font-bold bg-[#f29c94]  rounded-md   text-center'>
                             Our Craft Items
                         </h2>
-                        <p className='w-[800px] text-center mx-auto'>Welcome to Our Craft Items section, where creativity intertwines with craftsmanship to offer a unique assortment of handcrafted treasures. Dive into a world of artisanal excellence as you explore our carefully curated collection, showcasing the finest examples of traditional and contemporary craftsmanship. From intricately handwoven textiles that tell stories of cultural heritage to exquisite ceramic creations that capture the essence of artistic expression, each item in our range is a testament to the passion and skill of the artisans behind it.</p>
+                        <p className='lg:w-[800px] text-center mx-auto'>Welcome to Our Craft Items section, where creativity intertwines with craftsmanship to offer a unique assortment of handcrafted treasures. Dive into a world of artisanal excellence as you explore our carefully curated collection, showcasing the finest examples of traditional and contemporary craftsmanship. From intricately handwoven textiles that tell stories of cultural heritage to exquisite ceramic creations that capture the essence of artistic expression, each item in our range is a testament to the passion and skill of the artisans behind it.</p>
                     </div>
                     <div className='mt-10'>
                         <CraftItems></CraftItems>

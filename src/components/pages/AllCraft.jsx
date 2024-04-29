@@ -5,11 +5,8 @@ import { Link } from "react-router-dom";
 const AllCraft = () => {
 
     const [items, setItems] = useState([])
-    // const [dataLength, setDataLength] = useState(6)
-    // console.log(items)
-
     useEffect(() => {
-        fetch('http://localhost:5000/textileArt')
+        fetch('https://assignment-10-server-mu-liart.vercel.app/textileArt')
             .then(res => res.json())
             .then(data => {
                 setItems(data)
@@ -17,9 +14,9 @@ const AllCraft = () => {
     }, [])
     return (
         // items.map(item => <TableCraft key={item._id} item={item}></TableCraft>)
-        < div >
+        < div className="">
             <div className="overflow-x-auto mt-20">
-                <table className="table border p-5">
+                <table className="table border p-20">
                     {/* head */}
                     <thead>
                         <tr className="font-bold">

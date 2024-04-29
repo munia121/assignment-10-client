@@ -55,12 +55,12 @@ export const router = createBrowserRouter([
             {
                 path:'/update/:id',
                 element:<UpdatePage></UpdatePage>,
-                loader: ({params}) => fetch(`http://localhost:5000/textileArt/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment-10-server-mu-liart.vercel.app/textileArt/${params.id}`)
             },
             {
                 path:'/category/:category',
                 element:<CategoryPage></CategoryPage>,
-                loader: ({params}) => fetch(`http://localhost:5000/textileCategory/${params.category}`)
+                loader: ({params}) => fetch(`https://assignment-10-server-mu-liart.vercel.app/textileCategory/${params.category}`)
             },
 
            

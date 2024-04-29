@@ -6,7 +6,7 @@ const CraftItems = () => {
     // console.log(items)
 
     useEffect(() =>{
-        fetch('http://localhost:5000/textileArt')
+        fetch('https://assignment-10-server-mu-liart.vercel.app/textileArt')
         .then(res => res.json())
         .then(data =>{
             setItems(data)

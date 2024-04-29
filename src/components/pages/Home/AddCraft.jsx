@@ -28,7 +28,7 @@ const AddCraft = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/textileArt/', {
+        fetch('https://assignment-10-server-mu-liart.vercel.app/textileArt/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

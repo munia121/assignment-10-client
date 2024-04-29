@@ -11,7 +11,7 @@ const MyCraft = () => {
     const [displayItem, setDisplayItem] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${user?.email}`)
+        fetch(`https://assignment-10-server-mu-liart.vercel.app/products/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

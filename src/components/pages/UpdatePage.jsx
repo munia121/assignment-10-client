@@ -27,7 +27,7 @@ const UpdatePage = () => {
 
         // send data to the server
 
-        fetch(`http://localhost:5000/textileArt/${_id}`, {
+        fetch(`https://assignment-10-server-mu-liart.vercel.app/textileArt/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

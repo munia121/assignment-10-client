@@ -114,7 +114,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div> */}
-            <div className="hero  min-h-screen ">
+            <div className="hero  min-h-screen mt-20">
                 <div className=" flex-col ">
                     <div className="text-center ">
                         <h1 className="lg:text-5xl font-bold">Login now!</h1>
