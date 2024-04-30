@@ -97,7 +97,7 @@ const AddCraft = () => {
                                 <select className='w-full h-12 border rounded-lg' name='category' value={selectCategory} onChange={handleCategory}>
                                     <option className='w-50' value="">Select...</option>
                                     <option value="Embroidery">Embroidery</option>
-                                    <option value="Knitt ing & Crocheting">Knitt ing & Crocheting</option>
+                                    <option value="Knitting & Crocheting">Knitting & Crocheting</option>
                                     <option value="Quilting">Quilting</option>
                                     <option value="Beadwork">Beadwork</option>
                                     <option value="Tie-Dyeing">Tie-Dyeing</option>
