@@ -2,13 +2,25 @@
 # Website name: weaveWonders .
 # Live Link: https://glistening-valkyrie-a38963.netlify.app/
 
-- Exquisite Textile Exhibitions: Immerse yourself in the rich tapestry of textiles from different cultures and eras, highlighting the craftsmanship and cultural significance behind each piece.
+# Overview 
+This repository contains the source code for an Art and Craft Website, designed to showcase various art and craft items, allow users to manage their collections, and provide an engaging platform for art enthusiasts. Exquisite Textile Exhibitions: Immerse yourself in the rich tapestry of textiles from different cultures and eras, highlighting the craftsmanship and cultural significance behind each piece.Visually Stunning Artwork: Experience the power of visual storytelling through our collection of paintings, sculptures, and mixed media artwork, each conveying unique narratives and emotions.
 
-- Visually Stunning Artwork: Experience the power of visual storytelling through our collection of paintings, sculptures, and mixed media artwork, each conveying unique narratives and emotions.
+# Features:
+Feature-1: Through this project a user can add art and craft of his choice.
+Feature-2: A user can remove and update the added art and crafts as per his choice through this project
+Feature-3: Here is a feature added where user can see all the products added and one user can't see other user's added products.
 
-- Artist Spotlights: Learn more about the artists behind the masterpieces as we feature in-depth profiles and interviews, offering insights into their creative processes and inspirations.
+
+# Tecnology used: 
+<b> react, javascript, nodejs, mongodb, expressjs, firebase, html-css,tailwind.</b>
+
+# Contributing
+Contributions are welcome! Please follow these steps to contribute:
+- Fork the repository.
+- Create a new branch (git checkout -b feature/your-feature).
+- Make your changes.
+- Commit your changes (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/your-feature).
+- Submit a pull request.
 
 
-- Interactive Workshops: Engage with art on a deeper level through our interactive workshops and demonstrations, where you can learn new techniques and unleash your own creativity.
-
-- Online Store: Take a piece of the gallery home with you by browsing our online store, offering a curated selection of artworks and artisanal textiles available for purchase.
